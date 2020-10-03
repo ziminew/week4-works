@@ -1,0 +1,87 @@
+@-webkit-keyframes jungwoos {
+	0% {
+       transform: rotate(0deg) scale(1, 1) skewY(0deg);
+
+	}
+    
+	50% {
+         transform: rotate(180deg) scale(1, 1) skewY(30deg);
+         
+	}
+
+    100% {
+         transform: rotate(360deg) scale(1, 1) skewY(0deg);
+
+    }
+
+}
+
+@-webkit-keyframes opacityToZero {
+	0% {
+		opacity: 1
+	}
+
+	50% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
+}
+
+
+.body {
+	width: 100%;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+}
+
+.box {
+	
+	position: absolute;
+	top: 30%;
+    left: 18%;
+    justify-content: space-between;
+    padding: 20px;
+    border-top-right-radius: 180px;
+    border-top-left-radius: 180px;
+    border-bottom-right-radius: 180px;
+    border-bottom-left-radius: 180px;
+
+    transition-property: all;
+    transition-duration: 3.5s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-duration: 2s;
+    
+}    
+.box:hover {
+	background-color: white;
+	animation-play-state: paused;
+}    
+
+.circle {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: pink;
+	
+
+	animation-name: jungwoos;
+	
+	animation-duration: 2.5s;
+	animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+
+}
+
+.circle:hover {
+	transform: rotate(180deg);
+	transform: scale(0.9,0.9);
+	animation-play-state: running;
+	animation-name: opacityToZero;
+	
+}
+
